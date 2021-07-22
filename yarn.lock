@@ -1868,6 +1868,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@popperjs/core@^2.9.2":
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.9.2.tgz#adea7b6953cbb34651766b0548468e743c6a2353"
+  integrity sha512-VZMYa7+fXHdwIq1TDhSXoVmSPEGM/aa+6Aiq3nVVJ9bXr24zScr+NlKFKC3iPljA7ho/GAZr+d2jOf5GIRC30Q==
+
 "@protobufjs/aspromise@^1.1.1", "@protobufjs/aspromise@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@protobufjs/aspromise/-/aspromise-1.1.2.tgz#9b8b0cc663d669a7d8f6f5d0893a14d348f30fbf"
@@ -2477,6 +2482,28 @@
   dependencies:
     "@typescript-eslint/types" "4.28.4"
     eslint-visitor-keys "^2.0.0"
+
+"@vant/icons@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@vant/icons/-/icons-1.6.0.tgz#3db7eb7f963f51a2a08676720d5af9c4c3512feb"
+  integrity sha512-4Hvq4tl4grCOJLZ0e8ZaivBV8xOcmTPmTT8BDkTrEIKqnDowRFDdsXxcHECzWmbmMx+CYGdngvd2Cq8YR9DfKA==
+
+"@vant/lazyload@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@vant/lazyload/-/lazyload-1.2.0.tgz#62e9779bd7844ad8f71c2ca2bf852e6147c7a86d"
+  integrity sha512-QsqNm8nNat4z9TdrTI4YkDXZXgg3dbGhHf7tC4mhel+gJ0u2WZcoMYKWkzQXvO+vo395cByT5iUE5a72360B2Q==
+
+"@vant/popperjs@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@vant/popperjs/-/popperjs-1.1.0.tgz#b4edee5bbfa6fb18705986e313d4fd5f17942a0f"
+  integrity sha512-8MD1gz146awV/uPxYjz4pet22f7a9YVKqk7T+gFkWFwT9mEcrIUEg/xPrdOnWKLP9puXyYtm7oVfSDSefZ/p/w==
+  dependencies:
+    "@popperjs/core" "^2.9.2"
+
+"@vant/use@^1.2.0":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@vant/use/-/use-1.2.1.tgz#0a0237d48e4ea347b2e732d55cf53869209238fc"
+  integrity sha512-a53qVmuCXgRVCqZfOYx/I1KbhDSYCbEfl9mfpxJVzJJQofRR9YUf+Jv2dJT37xDQUAl+GXYsoGxNksyiN/ZOkA==
 
 "@vue/babel-helper-vue-transform-on@^1.0.2":
   version "1.0.2"
@@ -16508,6 +16535,16 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
+
+vant@^3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/vant/-/vant-3.1.4.tgz#46acdaadb87c3c3c9b7f1d56b5877f89a75b9100"
+  integrity sha512-RIj5M8C3rXG3qanqpXc63g9xqglcPtibh7/ihMCGKvtpOnOFfH2NJnnzrGWAUA3xoPNz4QZ7AWMCVWxm+1iBXw==
+  dependencies:
+    "@vant/icons" "^1.6.0"
+    "@vant/lazyload" "^1.2.0"
+    "@vant/popperjs" "^1.1.0"
+    "@vant/use" "^1.2.0"
 
 vary@^1.1.2, vary@~1.1.2:
   version "1.1.2"
