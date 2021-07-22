@@ -1,8 +1,7 @@
-import { Readable } from 'stream'
 import { Controller, Get, Provide, Inject } from '@midwayjs/decorator'
 import { Context } from 'egg'
-import { render } from 'ssr-core-vue3'
 import { IApiService, IApiDetailService } from '../interface'
+import ScrapingService from 'src/service/scraping'
 
 interface IEggContext extends Context {
   apiService: IApiService
@@ -21,19 +20,13 @@ export class Index {
   @Inject('ApiDetailService')
   apiDeatilservice: IApiDetailService
 
+  @Inject()
+  busRouteService: ScrapingService
+
   @Get('/')
-  @Get('/detail/:id')
   async handler (): Promise<void> {
-    try {
-      this.ctx.apiService = this.apiService
-      this.ctx.apiDeatilservice = this.apiDeatilservice
-      const stream = await render<Readable>(this.ctx, {
-        stream: true
-      })
-      this.ctx.body = stream
-    } catch (error) {
-      console.log(error)
-      this.ctx.body = error
-    }
+    console.log('handler')
+    const data = await this.busRouteService.scrapingPowerOffList()
+    return data
   }
 }

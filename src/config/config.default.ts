@@ -14,5 +14,10 @@ export default (appInfo: EggAppInfo) => {
     prefix: '/',
     dir: join(appInfo.appDir, './build')
   }
+
+  config.userConfig = {
+    domain: 'http://www.95598.cn'
+  }
+
   return config
 }
