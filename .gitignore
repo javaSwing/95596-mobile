@@ -6,6 +6,7 @@ coverage/
 dist/
 .idea/
 run/
+build/
 .DS_Store
 *.sw*
 *.un~
