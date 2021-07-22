@@ -21,18 +21,20 @@ const pc = [
 export function genCurlConfig (
   method: urllib.HttpMethod = 'GET',
   data?: any,
-  isUserAgent = true,
   isGzip = true
 ): urllib.RequestOptions {
+  const ua = pc[Math.floor(Math.random() * pc.length)]
   return {
     method,
-    dataType: 'json',
+    // dataType: 'json',
+    dataType: 'text',
     data,
     headers: {
-      'Content-Type': 'application/json; charset=UTF-8',
-      'User-Agent': isUserAgent ? pc[Math.floor(Math.random() * pc.length)] : '',
+      'Content-Type': method === 'POST' ? 'application/x-www-form-urlencoded; charset=UTF-8' : 'application/json; charset=UTF-8',
+      'User-Agent': ua,
       'Accept-Encoding': 'gzip',
-      cookie: 'FSSBBIl1UgzbN7NS=5lBolo_70AtjfeusJxmdiySjQ83r27Ow_XRpXPQ1u93wBxtaz7Jv7k8t2n4HFcVa5Bpfbbwvg_TX8lqR3HDvHnq; cookie-web=78968004; orgNo=41101; orgName=%E6%B2%B3%E5%8D%97; CSWEBSID=mkDQg5JWNKwvw2gZKJ54GJTS0WDnj6wD!140833578; _pk_id.4.9c8b=b1049571429a23e4.1626919488.3.1626932527.1626930481.; cookie-webcc=29404764; FSSBBIl1UgzbN7NT=53H9DuDkyr1gqqqm_uYA24Aq3PlFchfYu5A1fT2WPxeqH2kkO770MYENX0o9VGXC1.zc.j.MQp_43La9sfc5vtmdn9RIA9DioW8fuhhMDzgU3sGkk2SBi9jGEfoM2PUsHN.MS2Q42PqNWpYwdqSHqJnssn6n9ISkVwTUnO43y1393lZBk0ihCsZ4S8m1cq_wzl1a.GLqZ7kEgLYP108WYu6i0b4I327IJterbFpdjXQQVkNnYjxPub9etNbFl5OdBEnzjSaerSZ.bxzwjcXRhD57MA7HEuWe3jc64ViEWwppHOJQ5qGZkPpf3mOJVtcSbv83itlhB25ydhO9yfDCIIs9brts5IYBVzljg.dF9B3IA'
+      'X-Requested-With': 'XMLHttpRequest',
+      cookie: 'FSSBBIl1UgzbN7NS=5lBolo_70AtjfeusJxmdiySjQ83r27Ow_XRpXPQ1u93wBxtaz7Jv7k8t2n4HFcVa5Bpfbbwvg_TX8lqR3HDvHnq; cookie-web=78968004; orgNo=41101; orgName=%E6%B2%B3%E5%8D%97; CSWEBSID=mkDQg5JWNKwvw2gZKJ54GJTS0WDnj6wD!140833578; _pk_id.4.9c8b=b1049571429a23e4.1626919488.3.1626932527.1626930481.; cookie-webcc=72971929; FSSBBIl1UgzbN7NT=53H9DuDkyr1gqqqm_u3YKmqyaicDfyqBQtEzvuOxO4v3R7lfER789raURT_Qc8jIvNctJUhr73R6jAOtG6dFEd_ueTOAsq6obYdjwGaoLwtbaByr2o4SMoELNJoej0fZnz_SGfHqC6Wn7qNYEDuihcGp2LNhzUz1psrnw7sPTMEykLQ4SV003N31bqLMsX8_HG4nREJihkhp5R5Jz9gJGq7l_2UaGy8IQy42ZB3Gwv2P.cZJLmpuy219hoLjOxQx0IuBTKYeNtZ_dkMIa1n_g10oHH2mGbJ1vCcJY8CsrIDWc4aX8bmt5gz3RKzYN9CZ0stAOsxCZJTuEUXygNKwVKu5FLYZxtFY243036KUSkF8a'
     },
     gzip: isGzip
   }
