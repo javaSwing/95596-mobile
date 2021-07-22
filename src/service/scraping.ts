@@ -52,7 +52,8 @@ export default class ScrapingService {
       )
       this.coreLogger.warn(result)
       if (result.status === 403) {
-        console.log(result)
+        console.log(403)
+        return result
       } else {
         return result.data
       }
