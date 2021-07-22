@@ -1,7 +1,9 @@
 
 <template>
-  <div>
-    <Button>button</Button>
+  <div class="container">
+    <Button type="primary" block>
+      button
+    </Button>
   </div>
 </template>
 
@@ -18,5 +20,8 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style lang="less">
+.container {
+  font-size: 16px;
+}
 </style>

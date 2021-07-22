@@ -19,6 +19,7 @@
     "@midwayjs/egg-ts-helper": "^1.0.5",
     "cross-env": "^7.0.3",
     "eslint-config-standard-vue-ts": "^1.0.5",
+    "postcss-pxtorem": "^5.1.1",
     "ssr": "^5.0.0",
     "ssr-plugin-midway": "^5.0.0",
     "ssr-plugin-vue3": "^5.0.0",
